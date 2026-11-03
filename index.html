@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-CO">
 <head>
+  <script>document.documentElement.classList.add("has-loader");</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071a35">
@@ -61,6 +62,39 @@
       .hero-actions .button { min-height: 48px; }
       .fit-visual img { height: auto; }
     }
+  
+    /* Experiencia visual inspirada en el sitio anterior de Fortuner. */
+    :root{--navy:#070b14;--blue:#176fff;--cyan:#43baff;--gold:#f4b323;--line:rgba(143,180,225,.16)}
+    body{background:#070b14} .wrap{width:min(1160px,calc(100% - 48px))}
+    .topbar{height:76px;background:rgba(4,12,25,.7);backdrop-filter:blur(14px);border-bottom:1px solid rgba(129,177,233,.13)}
+    .brand{gap:11px;line-height:1.1}.brand img{width:46px;height:46px;object-fit:contain;object-position:center;border-radius:9px;border:0;background:#0a1b33}.brand small{margin-top:5px}
+    .navlinks{gap:24px}.navlinks a:not(.nav-cta){color:#c3d0e1}.navlinks a:not(.nav-cta):hover{color:white}
+    .button,.nav-cta{min-height:48px;border-radius:12px;font-size:.94rem;letter-spacing:.01em}.button.primary,.nav-cta{background:linear-gradient(135deg,#087aff,#1458d3);box-shadow:0 10px 25px #0056be40;border-color:#67b5ff40}.button.primary:hover,.nav-cta:hover{background:linear-gradient(135deg,#228aff,#1b67e5)}
+    .button.secondary{border-color:#8ebff250;background:#0d244466}.button.secondary:hover{border-color:#94c7ff;background:#16365a}
+    .hero{background:radial-gradient(ellipse at 68% 40%,#0b478977 0%,transparent 48%),radial-gradient(ellipse at 15% 75%,#1a49a02e 0%,transparent 46%),linear-gradient(135deg,#070b14 10%,#071a32 65%,#050e1c);padding:145px 0 90px}
+    .hero-grid{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,70px)} .hero:before{opacity:.65}.hero-art{max-width:600px;justify-self:center}
+    .hero-art img{border:1px solid #5b9be438;box-shadow:0 24px 85px #0009,0 0 45px #0877ff1e;border-radius:18px;aspect-ratio:auto;height:auto}
+    .eyebrow{letter-spacing:.12em}.hero h1{font-size:clamp(2.5rem,5vw,4.3rem);letter-spacing:-.045em;line-height:1.06}.hero p{max-width:560px;color:#c0cfe1}
+    .trustline{background:#0a1423;color:#e6f1ff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust-item i{color:#89c8ff;background:#1162be36}.trust-item{font-size:.88rem}
+    .modules{background:#070b14}.fit{background:#0a1423}.screens{background:#070b14}.module-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .module{min-height:230px;border:1px solid var(--line);background:linear-gradient(155deg,#13253f,#0a1423 80%);border-radius:18px;box-shadow:0 18px 45px #0003;transition:transform .2s ease,border-color .2s ease}
+    .module:hover{transform:translateY(-3px);border-color:#388ff490}.module .icon{border:1px solid #4196ff44;color:#a9d8ff;background:#0a62bd30}
+    .fit-visual{background:#0e1d30;border:1px solid var(--line);padding:12px;border-radius:18px;box-shadow:0 24px 65px #0005}.fit-visual img{border:0;border-radius:10px;width:100%;height:auto;object-fit:contain}.visual-label{margin:10px 4px 2px;font-size:.76rem;color:#a5b4c9}
+    .screen-card{background:#111d30;border-radius:16px;box-shadow:0 18px 40px #0004}.screen-card img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;padding:0;background:#091323}.screen-card h3{margin-top:18px}.screen-card p{line-height:1.55}
+    .closing{background:linear-gradient(130deg,#091525,#0b2545,#08101c)}.closing-box{border-color:#5c94d64a;background:linear-gradient(120deg,#112743d9,#0b192ddb);box-shadow:0 20px 60px #0004}
+    .mobile-nav{display:none}.mobile-nav summary{list-style:none;cursor:pointer;border:1px solid #7da9d84a;background:#12243b;color:#fff;border-radius:10px;min-width:45px;height:45px;display:grid;place-items:center;font-size:1.25rem}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary:focus-visible,.mobile-nav a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .mobile-menu{position:absolute;top:68px;left:16px;right:16px;padding:8px;background:#0a1c33;border:1px solid #6da9e64a;border-radius:14px;box-shadow:0 20px 50px #0009}.mobile-menu a{display:block;text-decoration:none;padding:13px 15px;border-radius:8px;color:#e3efff}.mobile-menu a:hover,.mobile-menu a:focus{background:#16365a}
+    /* El contenido permanece accesible sin JavaScript y el loader tiene salida automática. */
+    .preloader{display:none;position:fixed;inset:0;z-index:1000;place-items:center;background:#050b15;pointer-events:none;animation:loader-failsafe 2.1s both}
+    html.has-loader .preloader{display:grid}.preloader.is-hidden{opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s}
+    .loader-inner{text-align:center;display:grid;justify-items:center;gap:15px}.loader-orbit{position:relative;width:90px;height:90px}.loader-orbit:before,.loader-orbit:after,.loader-orbit span{content:"";position:absolute;border:3px solid transparent;border-radius:50%;inset:0;animation:loader-spin 1.3s linear infinite}.loader-orbit:before{border-top-color:#ffbe32;border-right-color:#ffbe32}.loader-orbit:after{inset:15px;border-left-color:#318dff;border-bottom-color:#318dff;animation-direction:reverse}.loader-orbit span{inset:31px;border-top-color:#50d684;border-left-color:#50d684;animation-duration:.8s}
+    .loader-name{font-weight:850;font-size:1.1rem;letter-spacing:.12em;text-transform:uppercase;color:#eff7ff}.loader-note{font-size:.72rem;color:#a5bbd6;letter-spacing:.16em;text-transform:uppercase}.loader-bar{width:150px;height:2px;border-radius:2px;background:#173253;overflow:hidden}.loader-bar:after{content:"";display:block;width:100%;height:100%;transform-origin:left;background:linear-gradient(90deg,#237bff,#f4b323);animation:loader-progress 1.1s ease-out both}
+    @keyframes loader-spin{to{transform:rotate(360deg)}}@keyframes loader-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes loader-failsafe{0%,70%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+    @media(max-width:960px){.module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr 1fr;gap:28px}.hero h1{font-size:clamp(2.3rem,6vw,3.65rem)}}
+    @media(max-width:720px){.wrap{width:calc(100% - 32px)}.topbar{height:68px}.nav{gap:12px}.navlinks{display:none}.mobile-nav{display:block}.hero{padding:112px 0 58px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero h1{font-size:clamp(2.3rem,10vw,3.5rem);max-width:600px}.hero-art{max-width:580px;justify-self:center}.hero-actions{display:grid;grid-template-columns:1fr 1fr}.hero-actions .button{width:100%;padding:12px 14px}.fit-grid{grid-template-columns:1fr}.module{min-height:0}.screen-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.screen-card h3{padding:0 14px}.screen-card p{padding:0 14px 16px}}
+    @media(max-width:520px){.hero-actions{grid-template-columns:1fr}.hero h1{font-size:clamp(2.2rem,10.8vw,3rem)}.hero p{font-size:1rem}.module-grid{grid-template-columns:1fr}.screen-grid{grid-template-columns:1fr}.screen-card img{max-height:none}.trust-grid{grid-template-columns:1fr 1fr}.trust-item{align-items:flex-start}.closing-box{padding:25px 20px}}
+    @media(prefers-reduced-motion:reduce){.preloader{animation-duration:.01ms!important}.loader-orbit:before,.loader-orbit:after,.loader-orbit span{animation:none}.module,.button{transition:none}}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fortuner ERP","applicationCategory":"BusinessApplication","operatingSystem":"Windows","description":"Sistema ERP empresarial para integrar procesos financieros, logísticos, administrativos y de punto de venta. Según DSI, está dirigido a organizaciones con más de 20 usuarios concurrentes.","url":"https://fortunercolombia.redsapien.com/","creator":{"@type":"Organization","name":"DSI S.A.","url":"https://www.dsi.com.co/"},"featureList":["Gestión financiera","Gestión logística","Gestión administrativa","Gestión de punto de venta"]}
@@ -70,7 +104,8 @@
   </script>
 </head>
 <body>
-  <header class="topbar"><nav class="nav wrap" aria-label="Navegación principal"><a class="brand" href="#inicio" aria-label="Fortuner ERP, inicio"><img src="image/Open-Fortuner.webp" alt=""><span>Fortuner<small>SOFTWARE EMPRESARIAL</small></span></a><div class="navlinks"><a href="#solucion">La solución</a><a href="#modulos">Módulos</a><a href="#pantallas">Pantallas</a><a class="nav-cta" href="https://dsi-software.co/nuestros-servicios-2/" target="_blank" rel="noopener">Conocer Fortuner <span aria-hidden="true">↗</span></a></div></nav></header>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="loader-inner"><div class="loader-orbit"><span></span></div><div class="loader-name">Fortuner ERP</div><div class="loader-note">Gestión empresarial</div><div class="loader-bar"></div></div></div>
+  <header class="topbar"><nav class="nav wrap" aria-label="Navegación principal"><a class="brand" href="#inicio" aria-label="Fortuner ERP, inicio"><img src="image/Open-Fortuner.webp" alt=""><span>Fortuner<small>SOFTWARE EMPRESARIAL</small></span></a><div class="navlinks"><a href="#solucion">La solución</a><a href="#modulos">Módulos</a><a href="#pantallas">Pantallas</a><a class="nav-cta" href="https://dsi-software.co/nuestros-servicios-2/" target="_blank" rel="noopener">Conocer Fortuner <span aria-hidden="true">↗</span></a></div><details class="mobile-nav"><summary aria-label="Abrir menú de navegación">☰</summary><nav class="mobile-menu" aria-label="Menú móvil"><a href="#inicio">Inicio</a><a href="#modulos">Módulos</a><a href="#solucion">La solución</a><a href="#pantallas">Pantallas</a><a href="#contacto">Contacto</a></nav></details></nav></header>
   <main>
     <section class="hero" id="inicio"><div class="wrap hero-grid"><div><span class="eyebrow">Gestión empresarial integrada</span><h1>Fortuner ERP: conecte su negocio.</h1><p>Gestione ventas, inventarios y finanzas en una solución empresarial integrada.</p><div class="hero-actions"><a class="button primary" href="https://dsi-software.co/nuestros-servicios-2/" target="_blank" rel="noopener">Conozca Fortuner <span aria-hidden="true">→</span></a><a class="button secondary" href="#modulos">Explore los módulos</a></div><p class="hero-note">Una solución empresarial de DSI para organizaciones con más de 20 usuarios concurrentes, según información publicada por DSI.</p></div><div class="hero-art"><img src="image/Open-Fortuner.webp" alt="Identidad visual de Fortuner: el ERP que conecta su negocio con el futuro" fetchpriority="high" width="1734" height="907"></div></div></section>
     <div class="trustline"><div class="wrap trust-grid"><div class="trust-item"><i>↔</i>Información conectada</div><div class="trust-item"><i>▦</i>Operación multisucursal</div><div class="trust-item"><i>◫</i>Gestión por áreas</div><div class="trust-item"><i>⌁</i>Conectividad web y móvil*</div></div></div>
@@ -80,5 +115,14 @@
     <section class="closing" id="contacto"><div class="wrap closing-box"><div><h2>Conozca Fortuner para su empresa.</h2><p>Descubra sus módulos y consulte las opciones de implementación con DSI.</p></div><a class="button primary" href="https://dsi-software.co/nuestros-servicios-2/" target="_blank" rel="noopener">Consultar con DSI <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="footer"><div class="wrap"><div class="footer-inner"><div class="footer-brand">Fortuner ERP <small> · Software empresarial de DSI</small></div><small><a href="https://www.dsi.com.co/dsi/index-4.html" target="_blank" rel="noopener">Información del producto en DSI</a></small></div><p class="source-note">*La disponibilidad de conectividad y funcionalidades depende del alcance y los desarrollos contratados. Información del producto basada en publicaciones de DSI; consulte al proveedor para confirmar vigencia y condiciones. Esta página es una presentación informativa independiente, no el sitio oficial del fabricante.</p></div></footer>
+  <script>
+    (function(){
+      const loader=document.getElementById('preloader');
+      const done=()=>{if(!loader)return;loader.classList.add('is-hidden');setTimeout(()=>loader.remove(),350)};
+      const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      setTimeout(done,reduced?0:1100);
+      document.querySelectorAll('.mobile-menu a').forEach(link=>link.addEventListener('click',()=>{const menu=document.querySelector('.mobile-nav');if(menu)menu.open=false}));
+    })();
+  </script>
 </body>
 </html>
